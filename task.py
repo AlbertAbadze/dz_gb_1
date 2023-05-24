@@ -1,19 +1,21 @@
-def filter_strings(array):
-    result = []
-    for string in array:
-        if len(string) <= 3:
-            result.append(string)
-    return result
-
-# Ввод массива строк с клавиатуры
+# Ввод количество строк в массиве
 n = int(input("Введите количество строк в массиве: "))
+
+# Создание пустого массива array
 array = []
+
+# Ввод строк с клавиатуры и добавление их в массив array
 for i in range(n):
     string = input(f"Введите строку {i+1}: ")
     array.append(string)
 
-# Фильтрация массива
-filtered_array = filter_strings(array)
+# Создание пустого массива filtered_array
+filtered_array = []
+
+# Фильтрация массива и добавление отфильтрованных строк в filtered_array
+for string in array:
+    if len(string) <= 3:
+        filtered_array.append(string)
 
 # Вывод результата
 print("Отфильтрованный массив:")
